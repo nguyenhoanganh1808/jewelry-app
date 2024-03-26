@@ -146,12 +146,13 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               shrinkWrap: true,
               itemCount: 6,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
                 // mainAxisExtent: 320,
-                childAspectRatio: 0.6,
+                childAspectRatio: MediaQuery.of(context).size.width /
+                    (MediaQuery.of(context).size.height / 1.4),
               ),
               itemBuilder: (context, index) {
                 return Container(
